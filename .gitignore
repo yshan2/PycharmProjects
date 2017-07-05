@@ -1,4 +1,4 @@
-
+*.pyc
 *.xml
-
+.svn/*
 untitled1/
