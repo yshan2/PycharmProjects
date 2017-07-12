@@ -38,6 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ttsx',
+    'user',
+    'goods',
+    'order',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,6 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'user.middleware.userCertifi',
 )
 
 ROOT_URLCONF = 'project1.urls'
@@ -109,3 +113,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+SESSION_ENGINE='django.contrib.sessions.backends.cached_db'
